@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMIGRAÇÃO</title>
+</head>
+<body>
+    <h1>Agência de Imigração</h1>
+    País de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick='identificar()'>
+    <div id="res">
+    <script>
+        function identificar(){
+            var txtpais = window.document.getElementById('txtpais')    
+            var res = window.document.querySelector('div#res')
+            var pais = txtpais.value
+            res.innerHTML = `<p>Vivendo em <strong>${pais}</strong></p>`
+            if (pais != 'Brasil'){
+                res.innerHTML += '<p>Você é <strong>Estrangeiro</strong>!</p>'
+            }else{
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strong>!</p>'
+            }
+        }
+    </script>    
+    </div>
+</body>
+</html>
